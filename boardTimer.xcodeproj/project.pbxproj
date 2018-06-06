@@ -12,6 +12,11 @@
 		C3BA3A6820C04DB400604F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BA3A6620C04DB400604F2D /* Main.storyboard */; };
 		C3BA3A6A20C04DB400604F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BA3A6920C04DB400604F2D /* Assets.xcassets */; };
 		C3BA3A6D20C04DB400604F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BA3A6B20C04DB400604F2D /* LaunchScreen.storyboard */; };
+		C3BA3A7520C42F6900604F2D /* hum.wav in Resources */ = {isa = PBXBuildFile; fileRef = C3BA3A7420C42F6900604F2D /* hum.wav */; };
+		C3BA3A7920C5776100604F2D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A7820C5776100604F2D /* TableViewController.swift */; };
+		C3BA3A7B20C5815600604F2D /* TimerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */; };
+		C3BA3A8120C7E0DF00604F2D /* TimerSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */; };
+		C3BA3A8320C80C2800604F2D /* GameTimerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A8220C80C2800604F2D /* GameTimerDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		C3BA3A6920C04DB400604F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3BA3A6C20C04DB400604F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3BA3A6E20C04DB400604F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3BA3A7420C42F6900604F2D /* hum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hum.wav; path = ../../Downloads/hum.wav; sourceTree = "<group>"; };
+		C3BA3A7820C5776100604F2D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListTableViewController.swift; sourceTree = "<group>"; };
+		C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingsViewController.swift; sourceTree = "<group>"; };
+		C3BA3A8220C80C2800604F2D /* GameTimerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,7 @@
 		C3BA3A5620C04DB300604F2D = {
 			isa = PBXGroup;
 			children = (
+				C3BA3A7420C42F6900604F2D /* hum.wav */,
 				C3BA3A6120C04DB400604F2D /* boardTimer */,
 				C3BA3A6020C04DB400604F2D /* Products */,
 			);
@@ -54,8 +65,12 @@
 		C3BA3A6120C04DB400604F2D /* boardTimer */ = {
 			isa = PBXGroup;
 			children = (
-				C3BA3A6220C04DB400604F2D /* AppDelegate.swift */,
 				C3BA3A6420C04DB400604F2D /* ViewController.swift */,
+				C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */,
+				C3BA3A7820C5776100604F2D /* TableViewController.swift */,
+				C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */,
+				C3BA3A8220C80C2800604F2D /* GameTimerDetailViewController.swift */,
+				C3BA3A6220C04DB400604F2D /* AppDelegate.swift */,
 				C3BA3A6620C04DB400604F2D /* Main.storyboard */,
 				C3BA3A6920C04DB400604F2D /* Assets.xcassets */,
 				C3BA3A6B20C04DB400604F2D /* LaunchScreen.storyboard */,
@@ -123,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BA3A7520C42F6900604F2D /* hum.wav in Resources */,
 				C3BA3A6D20C04DB400604F2D /* LaunchScreen.storyboard in Resources */,
 				C3BA3A6A20C04DB400604F2D /* Assets.xcassets in Resources */,
 				C3BA3A6820C04DB400604F2D /* Main.storyboard in Resources */,
@@ -137,6 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3BA3A6520C04DB400604F2D /* ViewController.swift in Sources */,
+				C3BA3A7B20C5815600604F2D /* TimerListTableViewController.swift in Sources */,
+				C3BA3A8120C7E0DF00604F2D /* TimerSettingsViewController.swift in Sources */,
+				C3BA3A8320C80C2800604F2D /* GameTimerDetailViewController.swift in Sources */,
+				C3BA3A7920C5776100604F2D /* TableViewController.swift in Sources */,
 				C3BA3A6320C04DB400604F2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
