@@ -27,6 +27,8 @@ class ViewController: UIViewController, TimerDelegate {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
     @IBOutlet weak var stopBtn: UIButton!
+    @IBOutlet weak var bgImageView: UIImageView!
+    
     
     @IBAction func pressStart(_ sender: Any) {
         startBtn.isHidden=true
@@ -49,10 +51,9 @@ class ViewController: UIViewController, TimerDelegate {
     }
     
     @IBAction func pressStop(_ sender: Any) {
-        reset()
+        resetUI()
         timer.invalidate()
     }
-    
     
     @objc func updateTime() {
         currentTime -= 1
@@ -64,11 +65,11 @@ class ViewController: UIViewController, TimerDelegate {
         
         if(currentTime == -1) {
             sleep(2)
-            reset()
+            resetUI()
             timer.invalidate()
         }
     }
-    func reset() {
+    func resetUI() {
         startBtn.isHidden = false
         pauseBtn.isHidden = true
         stopBtn.isEnabled = false
@@ -100,8 +101,18 @@ class ViewController: UIViewController, TimerDelegate {
         
         pauseBtn.isHidden=true
         stopBtn.isEnabled = false
+        
+        let taps = UITapGestureRecognizer(target: self, action: #selector(tapToReset(gesture:)))
+        self.bgImageView.addGestureRecognizer(taps)
+        
     }
-
+    
+    @objc func tapToReset(gesture: UITapGestureRecognizer) {
+        resetUI()
+        timer.invalidate()
+        pressStart(self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -109,7 +120,7 @@ class ViewController: UIViewController, TimerDelegate {
     func providerSent(_ data: Int) {
         settingTimeSeconds = data
         startTime = settingTimeSeconds
-        reset()
+        resetUI()
     }
     
     override func prepare(for segue:UIStoryboardSegue, sender:Any?) {

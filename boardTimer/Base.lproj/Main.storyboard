@@ -30,7 +30,7 @@
                                     <action selector="pressStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dF2-ya-vLc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-XC-PkH">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-XC-PkH">
                                 <rect key="frame" x="0.0" y="64" width="425" height="377"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.44235152080000001" blue="0.039108682380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,13 +81,14 @@
                                 <segue destination="9Wc-RY-pQk" kind="show" identifier="gotoTimerSegue" id="Two-qu-f0C"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Ne0-8L-hvS">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" style="done" id="Ne0-8L-hvS">
                             <connections>
                                 <segue destination="UH1-1C-4P9" kind="show" id="gXX-AC-4LW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bgImageView" destination="LB1-XC-PkH" id="CCR-c4-aEI"/>
                         <outlet property="pauseBtn" destination="bX9-qC-6sw" id="L6o-0f-Xvc"/>
                         <outlet property="secondsLabel" destination="Z2h-Fw-tGp" id="iiC-sz-fJM"/>
                         <outlet property="startBtn" destination="iRl-Hb-xB3" id="wbS-xT-sOc"/>
@@ -101,7 +102,6 @@
         <!--Settings-->
         <scene sceneID="73W-f5-stX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UJC-So-Hkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Settings" id="UH1-1C-4P9" customClass="TableViewController" customModule="boardTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OAV-K8-zGZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -129,6 +129,7 @@
                         <outlet property="tvSettingListView" destination="OAV-K8-zGZ" id="SOr-dZ-fWd"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJC-So-Hkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1197.1014492753625" y="502.98913043478262"/>
         </scene>
@@ -159,7 +160,6 @@
         <!--TimerList-->
         <scene sceneID="LqE-mp-jUm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pEX-XD-j4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="TimerList" id="fkB-sI-0I0" customClass="TimerListTableViewController" customModule="boardTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sd1-z3-7C4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -181,6 +181,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEX-XD-j4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2183" y="581"/>
         </scene>
