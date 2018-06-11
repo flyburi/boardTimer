@@ -23,38 +23,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <state key="normal" title="Stop">
-                                    <color key="titleColor" red="0.08295275463" green="0.15972352079999999" blue="0.64109051169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.17254901960784313" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pin-Fq-tIs"/>
                                     <action selector="pressStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dF2-ya-vLc"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-XC-PkH">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-XC-PkH">
                                 <rect key="frame" x="0.0" y="64" width="425" height="377"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.44235152080000001" blue="0.039108682380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRl-Hb-xB3">
                                 <rect key="frame" x="29" y="462" width="145" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.97893053760000004" green="0.366043487" blue="0.067526000089999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.80392156862745101" green="0.44705882352941173" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUp-h1-ox5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX9-qC-6sw">
-                                <rect key="frame" x="39" y="462" width="145" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <state key="normal" title="Pause">
-                                    <color key="titleColor" red="0.97893053760000004" green="0.366043487" blue="0.067526000089999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47q-aO-atk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2h-Fw-tGp">
@@ -71,6 +59,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX9-qC-6sw">
+                                <rect key="frame" x="44" y="461" width="145" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="0.93725490196078431" green="0.70980392156862748" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47q-aO-atk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +90,7 @@
                         <outlet property="bgImageView" destination="LB1-XC-PkH" id="CCR-c4-aEI"/>
                         <outlet property="pauseBtn" destination="bX9-qC-6sw" id="L6o-0f-Xvc"/>
                         <outlet property="secondsLabel" destination="Z2h-Fw-tGp" id="iiC-sz-fJM"/>
+                        <outlet property="settingsButton" destination="Ne0-8L-hvS" id="z1v-hy-g70"/>
                         <outlet property="startBtn" destination="iRl-Hb-xB3" id="wbS-xT-sOc"/>
                         <outlet property="stopBtn" destination="YfG-37-rdM" id="1j7-rs-hhU"/>
                     </connections>

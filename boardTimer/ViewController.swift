@@ -29,6 +29,7 @@ class ViewController: UIViewController, TimerDelegate {
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var bgImageView: UIImageView!
     
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
     
     @IBAction func pressStart(_ sender: Any) {
         startBtn.isHidden=true
@@ -59,8 +60,12 @@ class ViewController: UIViewController, TimerDelegate {
         currentTime -= 1
         secondsLabel.text = "\(currentTime)"
         
-        if(currentTime == notiStartTime){
-            playAudio()
+        if(currentTime <= notiStartTime && currentTime > 0){
+            playSoundCountDown()
+        }
+        
+        if(currentTime == 0) {
+            playSoundFinish()
         }
         
         if(currentTime == -1) {
@@ -78,15 +83,22 @@ class ViewController: UIViewController, TimerDelegate {
         secondsLabel.text = "\(startTime)"
     }
     
-    func playAudio() {
-        let url = Bundle.main.url(forResource: "hum", withExtension: "wav")
+    func playSoundCountDown() {
+        let soundID: SystemSoundID = 1305 // "lock.caf" : 1305
+        AudioServicesPlaySystemSound(soundID)
         
+    }
+    func playSoundFinish() {
+//        var soundID: SystemSoundID = 1050
+//        AudioServicesPlaySystemSound(soundID)
+        
+        let url = Bundle.main.url(forResource: "hum", withExtension: "wav")
         if let url = url{
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
                 guard let sound = audioPlayer else { return }
                 sound.play()
-                
+
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -103,6 +115,9 @@ class ViewController: UIViewController, TimerDelegate {
         stopBtn.isEnabled = false
         
         let taps = UITapGestureRecognizer(target: self, action: #selector(tapToReset(gesture:)))
+        
+        let color = UIColor(red:0.09, green:0.15, blue:0.24, alpha:1.0)
+        bgImageView.backgroundColor = color
         self.bgImageView.addGestureRecognizer(taps)
         
     }
