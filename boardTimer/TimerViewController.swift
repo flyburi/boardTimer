@@ -12,10 +12,13 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addGameTextField: UITextField!
+    @IBOutlet weak var addTimeTextField: UITextField!
     
-    
-    var games: [String] = ["루미큐브", "경찰과 도둑","다빈치 코드"]
-//    var gameItemsDictionary = ["루미큐브" : 30, "경찰과 도둑" : 60, "다빈치 코드" : 90]
+    var gameItemsDic = [
+        ["game":"루미큐브11", "time":"30"],
+        ["game":"경찰과 도둑11", "time":"60"],
+        ["game":"다빈치 코드", "time":"90"]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +33,27 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
         
         if addGameTextField.text!.isEmpty {
             print("Add Game Text Field is empty")
+            //TODO modal
         }
         
-        games.append(addGameTextField.text!)
+        if addTimeTextField.text!.isEmpty {
+            print("Add Time Text Field is empty")
+            //TODO modal
+        }
         
-        let indexPath = IndexPath(row: games.count - 1, section: 0)
+        let gameTitle = addGameTextField.text!
+        let timeLabel = addTimeTextField.text!
+        gameItemsDic.append(["game":gameTitle,"time":timeLabel])
+        
+        let indexPath = IndexPath(row: gameItemsDic.count - 1, section: 0)
         
         tableView.beginUpdates()
         tableView.insertRows(at: [indexPath], with: .automatic)
         tableView.endUpdates()
         
         addGameTextField.text = ""
+        addTimeTextField.text = ""
+        
         view.endEditing(true)
     }
 
@@ -50,16 +63,18 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 extension TimerViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return games.count
+        return gameItemsDic.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let gameTitle = games[indexPath.row]
+        let gameDic = gameItemsDic[(indexPath as NSIndexPath).row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell") as! GameCell
-        cell.titleLabel.text = gameTitle
+
+        cell.titleLabel.text = gameDic["game"]
+        cell.timeLabel.text = gameDic["time"]
         
         return cell
     }
@@ -73,7 +88,7 @@ extension TimerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            games.remove(at: indexPath.row)
+            gameItemsDic.remove(at: indexPath.row)
             
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .automatic)

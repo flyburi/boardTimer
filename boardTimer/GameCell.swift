@@ -10,8 +10,8 @@ import UIKit
 
 class GameCell: UITableViewCell {
 
-    
     @IBOutlet weak var titleLabel: UILabel!
     
-
+    @IBOutlet weak var timeLabel: UILabel!
+    
 }

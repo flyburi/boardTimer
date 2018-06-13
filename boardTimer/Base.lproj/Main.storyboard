@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -148,8 +147,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Game Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HNE-VY-3il">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Game Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HNE-VY-3il">
                                 <rect key="frame" x="20" y="88" width="166.66666666666666" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -173,9 +173,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNi-r1-RiU">
+                                                    <rect key="frame" x="305" y="11" width="109" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="timeLabel" destination="CNi-r1-RiU" id="As0-MF-Yn7"/>
                                             <outlet property="titleLabel" destination="0aa-NY-A9K" id="Sar-kA-HMm"/>
                                         </connections>
                                     </tableViewCell>
@@ -185,13 +193,10 @@
                                     <outlet property="delegate" destination="lzR-nF-K1a" id="a57-l3-pV6"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-W5-O6w" customClass="YTRoundedButton" customModule="boardTimer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-W5-O6w" customClass="YTRoundedButton" customModule="boardTimer" customModuleProvider="target">
                                 <rect key="frame" x="314" y="88" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.65098039215686276" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ElJ-q3-AfB"/>
-                                    <constraint firstAttribute="height" constant="40" id="XKZ-Nz-jmi"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,26 +205,26 @@
                                     <action selector="addButtonTapped:" destination="lzR-nF-K1a" eventType="touchUpInside" id="RNc-9P-Sad"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(Sec.)" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-EW-VGc">
+                                <rect key="frame" x="194" y="88" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZjD-W5-O6w" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HNE-VY-3il" secondAttribute="trailing" constant="8" symbolic="YES" id="PvE-WG-bwh"/>
-                            <constraint firstItem="HNE-VY-3il" firstAttribute="leading" secondItem="mZ3-l4-QeL" secondAttribute="leadingMargin" id="R4n-3O-zbj"/>
-                            <constraint firstItem="HNE-VY-3il" firstAttribute="height" secondItem="ZjD-W5-O6w" secondAttribute="height" id="Szw-Xa-fhw"/>
-                            <constraint firstItem="HNE-VY-3il" firstAttribute="top" secondItem="eUK-Q4-hr0" secondAttribute="top" constant="24" id="VYA-QD-fsE"/>
-                            <constraint firstItem="HNE-VY-3il" firstAttribute="bottom" secondItem="ZjD-W5-O6w" secondAttribute="bottom" id="air-ni-0HY"/>
-                            <constraint firstAttribute="trailing" secondItem="ZjD-W5-O6w" secondAttribute="trailing" constant="20" id="dOs-Fg-HJs"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eUK-Q4-hr0"/>
                     </view>
                     <connections>
                         <outlet property="addGameTextField" destination="HNE-VY-3il" id="kGc-Et-CQE"/>
+                        <outlet property="addTimeTextField" destination="J0L-EW-VGc" id="rPv-YJ-pLg"/>
                         <outlet property="tableView" destination="ugM-NE-Nu1" id="pOP-58-12a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftD-nt-OUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202.8985507246377" y="1181.25"/>
+            <point key="canvasLocation" x="1946.376811594203" y="502.98913043478262"/>
         </scene>
         <!--Time Setting-->
         <scene sceneID="zib-NQ-e0x">

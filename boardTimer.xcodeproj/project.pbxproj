@@ -17,7 +17,6 @@
 		C3BA3A6D20C04DB400604F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BA3A6B20C04DB400604F2D /* LaunchScreen.storyboard */; };
 		C3BA3A7520C42F6900604F2D /* hum.wav in Resources */ = {isa = PBXBuildFile; fileRef = C3BA3A7420C42F6900604F2D /* hum.wav */; };
 		C3BA3A7920C5776100604F2D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A7820C5776100604F2D /* TableViewController.swift */; };
-		C3BA3A7B20C5815600604F2D /* TimerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */; };
 		C3BA3A8120C7E0DF00604F2D /* TimerSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		C3BA3A6E20C04DB400604F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3BA3A7420C42F6900604F2D /* hum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hum.wav; path = ../../Downloads/hum.wav; sourceTree = "<group>"; };
 		C3BA3A7820C5776100604F2D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListTableViewController.swift; sourceTree = "<group>"; };
 		C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +73,6 @@
 				C3BA3A6420C04DB400604F2D /* ViewController.swift */,
 				C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */,
 				C3BA3A7820C5776100604F2D /* TableViewController.swift */,
-				C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */,
 				C3BA3A6220C04DB400604F2D /* AppDelegate.swift */,
 				C3BA3A6620C04DB400604F2D /* Main.storyboard */,
 				C3BA3A6920C04DB400604F2D /* Assets.xcassets */,
@@ -159,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3BA3A6520C04DB400604F2D /* ViewController.swift in Sources */,
-				C3BA3A7B20C5815600604F2D /* TimerListTableViewController.swift in Sources */,
 				C38B044420D161D50000C3DB /* YTRoundedButton.swift in Sources */,
 				C3BA3A8120C7E0DF00604F2D /* TimerSettingsViewController.swift in Sources */,
 				C3BA3A7920C5776100604F2D /* TableViewController.swift in Sources */,
