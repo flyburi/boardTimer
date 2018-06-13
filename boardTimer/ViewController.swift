@@ -116,9 +116,9 @@ class ViewController: UIViewController, TimerDelegate {
         
         let taps = UITapGestureRecognizer(target: self, action: #selector(tapToReset(gesture:)))
         
-        let color = UIColor(red:0.09, green:0.15, blue:0.24, alpha:1.0)
+        let color = UIColor(red:0.44, green:0.65, blue:0.63, alpha:1.0)
         bgImageView.backgroundColor = color
-        self.bgImageView.addGestureRecognizer(taps)
+        bgImageView.addGestureRecognizer(taps)
         
     }
     

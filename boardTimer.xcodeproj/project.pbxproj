@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30B127520D158E900A08B18 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B127420D158E900A08B18 /* TimerViewController.swift */; };
+		C38B044220D15DE00000C3DB /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B044120D15DE00000C3DB /* GameCell.swift */; };
+		C38B044420D161D50000C3DB /* YTRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B044320D161D50000C3DB /* YTRoundedButton.swift */; };
 		C3BA3A6320C04DB400604F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A6220C04DB400604F2D /* AppDelegate.swift */; };
 		C3BA3A6520C04DB400604F2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A6420C04DB400604F2D /* ViewController.swift */; };
 		C3BA3A6820C04DB400604F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BA3A6620C04DB400604F2D /* Main.storyboard */; };
@@ -16,10 +19,12 @@
 		C3BA3A7920C5776100604F2D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A7820C5776100604F2D /* TableViewController.swift */; };
 		C3BA3A7B20C5815600604F2D /* TimerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */; };
 		C3BA3A8120C7E0DF00604F2D /* TimerSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */; };
-		C3BA3A8320C80C2800604F2D /* GameTimerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA3A8220C80C2800604F2D /* GameTimerDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C30B127420D158E900A08B18 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		C38B044120D15DE00000C3DB /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		C38B044320D161D50000C3DB /* YTRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTRoundedButton.swift; sourceTree = "<group>"; };
 		C3BA3A5F20C04DB400604F2D /* boardTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boardTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BA3A6220C04DB400604F2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3BA3A6420C04DB400604F2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +36,6 @@
 		C3BA3A7820C5776100604F2D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListTableViewController.swift; sourceTree = "<group>"; };
 		C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingsViewController.swift; sourceTree = "<group>"; };
-		C3BA3A8220C80C2800604F2D /* GameTimerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +69,13 @@
 		C3BA3A6120C04DB400604F2D /* boardTimer */ = {
 			isa = PBXGroup;
 			children = (
+				C30B127420D158E900A08B18 /* TimerViewController.swift */,
+				C38B044120D15DE00000C3DB /* GameCell.swift */,
+				C38B044320D161D50000C3DB /* YTRoundedButton.swift */,
 				C3BA3A6420C04DB400604F2D /* ViewController.swift */,
 				C3BA3A8020C7E0DF00604F2D /* TimerSettingsViewController.swift */,
 				C3BA3A7820C5776100604F2D /* TableViewController.swift */,
 				C3BA3A7A20C5815600604F2D /* TimerListTableViewController.swift */,
-				C3BA3A8220C80C2800604F2D /* GameTimerDetailViewController.swift */,
 				C3BA3A6220C04DB400604F2D /* AppDelegate.swift */,
 				C3BA3A6620C04DB400604F2D /* Main.storyboard */,
 				C3BA3A6920C04DB400604F2D /* Assets.xcassets */,
@@ -154,10 +160,12 @@
 			files = (
 				C3BA3A6520C04DB400604F2D /* ViewController.swift in Sources */,
 				C3BA3A7B20C5815600604F2D /* TimerListTableViewController.swift in Sources */,
+				C38B044420D161D50000C3DB /* YTRoundedButton.swift in Sources */,
 				C3BA3A8120C7E0DF00604F2D /* TimerSettingsViewController.swift in Sources */,
-				C3BA3A8320C80C2800604F2D /* GameTimerDetailViewController.swift in Sources */,
 				C3BA3A7920C5776100604F2D /* TableViewController.swift in Sources */,
+				C30B127520D158E900A08B18 /* TimerViewController.swift in Sources */,
 				C3BA3A6320C04DB400604F2D /* AppDelegate.swift in Sources */,
+				C38B044220D15DE00000C3DB /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
