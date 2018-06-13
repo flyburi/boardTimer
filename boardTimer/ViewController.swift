@@ -69,9 +69,10 @@ class ViewController: UIViewController, TimerDelegate {
         }
         
         if(currentTime == -1) {
-            sleep(2)
+            sleep(1)
             resetUI()
             timer.invalidate()
+            pressStart(self)
         }
     }
     func resetUI() {
@@ -89,20 +90,20 @@ class ViewController: UIViewController, TimerDelegate {
         
     }
     func playSoundFinish() {
-//        var soundID: SystemSoundID = 1050
-//        AudioServicesPlaySystemSound(soundID)
+        let soundID: SystemSoundID = 1050
+        AudioServicesPlaySystemSound(soundID)
         
-        let url = Bundle.main.url(forResource: "hum", withExtension: "wav")
-        if let url = url{
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                guard let sound = audioPlayer else { return }
-                sound.play()
-
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }
+//        let url = Bundle.main.url(forResource: "hum", withExtension: "wav")
+//        if let url = url{
+//            do {
+//                audioPlayer = try AVAudioPlayer(contentsOf: url)
+//                guard let sound = audioPlayer else { return }
+//                sound.play()
+//
+//            } catch let error {
+//                print(error.localizedDescription)
+//            }
+//        }
     }
 
     
